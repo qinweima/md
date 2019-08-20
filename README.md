@@ -17,6 +17,7 @@
 * [**强调**](#强调)
 * [**转义**](#转义)
 * [**删除线**](#删除线)
+* [**注释**](#注释)
 # 标题层级
 ## 二级标题
 ### 三级标题
@@ -77,11 +78,18 @@
 >
 >还支持这种写法，如果不想混淆的话：
 >[foo4]: <http://example.com/> "Optional Title Here"
+>
+>这里是[foo1], 这里是[foo2], 这里是[foo3]
 >```
+[foo1]: http://example.com/ "Optional Title Here"
+[foo2]: http://example.com/ 'Optional Title Here'
+[foo3]: http://example.com/ (Optional Title Here)
+这里是[foo1], 这里是[foo2], 这里是[foo3]
 ----------------
 # 图片
 > 在链接两种形式上多加一个！
->`![baidu](https://www.baidu.com/img/baidu_resultlogo@2.png "这是百度首页链接的地址")`
+>
+>`![IBM](https://github.githubassets.com/images/modules/site/logos/ibm-logo.png "这是IBM Logo地址")`
 >
 >![IBM](https://github.githubassets.com/images/modules/site/logos/ibm-logo.png "这是IBM Logo地址")
 >
@@ -122,15 +130,7 @@
 >`__字体加粗__`
 ----------------
 # 转义
-\\
-\*
-\~
-\`
-\_
-\-
-\+
-\.
-\!
+\\ \* \~ \` \_ \- \+ \. \!
 ```
 \\
 \*
@@ -148,3 +148,25 @@
 >`~~删除线~~`
 >[button](https://blog.csdn.net/renlzrz/article/details/83545521 "LearnFrom")
 ----------------
+# 注释
+<!-- dd -->
+[comment]: <> (This is a comment, it will not be included)
+[comment]: <> (in  the output file unless you use it in)
+[comment]: <> (a reference style link.)
+[//]: <> (This is also a comment.)
+[//]: # (This may be the most platform independent comment)
+[^]: comment
+[^_^]: cuteComment
+
+```
+1. <!-- comment -->
+>  此方法可以批量注释
+2. [comment]: <> (This is a comment, it will not be included)
+3. [comment]: <> (in  the output file unless you use it in)
+4. [comment]: <> (a reference style link.)
+5. [//]: <> (This is also a comment.)
+6. [//]: # (This may be the most platform independent comment)
+以下方法非所有工具通用(似乎只能跟一个单词)
+7. [^]: comment
+8. [^_^]: cuteComment
+```
